@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.ejercicio.grpc";
+option java_outer_classname = "ConverterProto";
+
+// Servicio que define las operaciones de conversión
+service Converter {
+  rpc Convert (ConvertRequest) returns (ConvertResponse);
+}
+
+// Enumeración para identificar el tipo de conversión solicitado
+enum ConversionType {
+  CELSIUS_TO_FAHRENHEIT = 0;
+  SOLES_TO_DOLLARES = 1;
+  KILOMETERS_TO_MILES = 2;
+}
+
+// Estructura de la petición
+message ConvertRequest {
+  double value = 1;
+  ConversionType type = 2;
+}
+
+// Estructura de la respuesta con soporte para validaciones
+message ConvertResponse {
+  double result = 1;
+  bool success = 2;
+  string message = 3; 
+}
