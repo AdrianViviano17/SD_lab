@@ -19,7 +19,7 @@ public class CalculatorClient {
                 .setA(8)
                 .setB(4)
                 .build();
-
+ 
         Response response = stub.sum(request);
 
         System.out.println("Resultado: " + response.getResult());

@@ -15,7 +15,6 @@ com\franco\producto\CalculatorGrpc$MethodHandlers.class
 com\franco\producto\CalculatorGrpc$CalculatorImplBase.class
 com\franco\producto\CalculatorGrpc$CalculatorBaseDescriptorSupplier.class
 com\franco\producto\CalculatorGrpc$AsyncService.class
-calculator.proto
 com\franco\producto\Request$1.class
 com\franco\producto\Response.class
 com\franco\producto\Request$Builder.class
