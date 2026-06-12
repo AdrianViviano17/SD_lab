@@ -1,0 +1,25 @@
+services:
+
+  arequipa_db:
+    image: postgres:15
+    container_name: postgres_arequipa
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: almacen_arequipa
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  lima_db:
+    image: postgres:15
+    container_name: postgres_lima
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: almacen_lima
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
